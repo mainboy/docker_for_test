@@ -1,0 +1,9 @@
+web:
+    build: .
+    command: python app.py
+    links:
+        - db
+    ports:
+        - "8000:8000"
+db:
+    image: training/postgres
